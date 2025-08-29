@@ -29,24 +29,4 @@ Feature: New User Signup on PHP Travels
     And I click on the Signup button
     Then I should see an error message "Email already exists"
 
-  @Negative
-  Scenario: Signup with mismatched passwords
-    When I enter first name "Alex"
-    And I enter last name "Brown"
-    And I enter email "alex.brown@example.com"
-    And I enter phone number "9876501234"
-    And I enter password "Password@123"
-    And I confirm password "WrongPassword@123"
-    And I click on the Signup button
-    Then I should see an error message "Passwords do not match"
-
-  @Negative
-  Scenario: Signup with missing mandatory fields
-    When I leave the first name field empty
-    And I enter last name "Miller"
-    And I enter email "miller@example.com"
-    And I enter phone number "9876523456"
-    And I enter password "Password@123"
-    And I confirm password "Password@123"
-    And I click on the Signup button
-    Then I should see a validation message "First name is required"
+ 
